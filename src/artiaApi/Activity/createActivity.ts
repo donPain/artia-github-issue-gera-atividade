@@ -3,15 +3,6 @@ var axios = require("axios");
 
 //Parametros la do core do action {organizationId, accountId}
 //Parametros informados no commit através de t:{activityId} | tudo que estiver dentro do comentário irá para tarefa.
-const title: string = "teste 123 [1]";
-const description: string = "descrição";
-const organizationId: number = 111402;
-const folderId: number = 3764173;
-const categoryText: string = "asdasd";
-const accountId: number = 3757321;
-const creatorEmail: string = "nerdplis@gmail.com";
-const creatorPassword: string = "mobralzera";
-const estimatedEffort: number = 1;
 
 module.exports = async function createActivity(
   organizationId: number,
