@@ -1,8 +1,8 @@
-# GitHub Actions para o Artia
+# GitHub Actions + Artia
 
-O GitHub Actions para o [Artia](https://github.com/donPain/artia-github-issue-gera-atividade/tree/master) receber uma tarefa quando uma issue for criada.
+Quando uma issue for criada no GitHub, o GitHub Actions irá criar uma tarefa nova no [Artia](https://github.com/donPain/artia-github-issue-gera-atividade/tree/master) referente a tarefa criada.
 
-- Crie automaticamente uma tarefa nova no Artia quando uma issue é criado no GitHub.
+- Crie automaticamente uma tarefa nova no Artia quando uma issue é criada no GitHub.
 - Declare o esofrço da tarefa quando ela for criada ao adicionar "[número de horas trabalhadas]" no fim do nome da tarefa
 
 ## Actions
@@ -19,7 +19,7 @@ O GitHub Actions para o [Artia](https://github.com/donPain/artia-github-issue-ge
 -->
 
 ## Como Usar
-- Declarar versão e repositório da versão apropriada
+- Declarar repositório da versão apropriada
 - Alterar "organizationId" para o ID da Organização correta.
 - Alterar "accountID" para o Grupo de Usuários correto.
 - Alterar "folderId" para a Pasta de Projetos correta.
