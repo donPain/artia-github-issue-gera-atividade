@@ -3,7 +3,7 @@ var asyncGetToken = require("../Authorization/getToken");
 //Parametros la do core do action {organizationId, accountId}
 //Parametros informados no commit através de t:{activityId} | tudo que estiver dentro do comentário irá para tarefa.
 
-export default async function createActivity(
+module.exports = async function createActivity(
   organizationId: number,
   accountId: number,
   folderId: number,
@@ -115,4 +115,4 @@ export default async function createActivity(
       if (res.error) throw new Error(res.error);
       console.log(res.raw_body);
     });
-}
+};
