@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "forceConsistentCasingInFileNames": true,
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "outDir": "src/build",
+      "rootDir": "./src/artiaApi",
+      "target": "ES2017",
+      "skipLibCheck": true,
+      "strict": true
+  }
+}
+
