@@ -36,7 +36,7 @@ module.exports = async function createActivity(
   });
   const config = {
     method: "POST",
-    url: "https://app.artia.com/graphql'",
+    url: "https://app.artia.com/graphql",
     headers: {
       OrganizationId: organizationId,
       "Content-Type": "application/json",
