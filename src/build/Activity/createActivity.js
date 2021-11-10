@@ -12,9 +12,7 @@ const accountId = 3757321;
 const creatorEmail = "nerdplis@gmail.com";
 const creatorPassword = "mobralzera";
 const estimatedEffort = 1;
-createActivity(organizationId, accountId, folderId, title, description, categoryText, estimatedEffort, creatorEmail, creatorPassword);
-// module.exports =
-async function createActivity(organizationId, accountId, folderId, title, description, categoryText, estimatedEffort, creatorEmail, creatorPassword) {
+module.exports = async function createActivity(organizationId, accountId, folderId, title, description, categoryText, estimatedEffort, creatorEmail, creatorPassword) {
     var newToken = await asyncGetToken(creatorEmail, creatorPassword);
     var data = JSON.stringify({
         query: `mutation{
@@ -51,4 +49,4 @@ async function createActivity(organizationId, accountId, folderId, title, descri
         .catch(function (error) {
         console.log(error);
     });
-}
+};

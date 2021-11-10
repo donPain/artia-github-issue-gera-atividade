@@ -12,19 +12,8 @@ const accountId: number = 3757321;
 const creatorEmail: string = "nerdplis@gmail.com";
 const creatorPassword: string = "mobralzera";
 const estimatedEffort: number = 1;
-createActivity(
-  organizationId,
-  accountId,
-  folderId,
-  title,
-  description,
-  categoryText,
-  estimatedEffort,
-  creatorEmail,
-  creatorPassword
-);
-// module.exports =
-async function createActivity(
+
+module.exports = async function createActivity(
   organizationId: number,
   accountId: number,
   folderId: number,
@@ -71,4 +60,4 @@ async function createActivity(
     .catch(function (error: any) {
       console.log(error);
     });
-}
+};
