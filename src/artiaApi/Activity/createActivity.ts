@@ -3,8 +3,28 @@ var axios = require("axios");
 
 //Parametros la do core do action {organizationId, accountId}
 //Parametros informados no commit através de t:{activityId} | tudo que estiver dentro do comentário irá para tarefa.
-
-module.exports = async function createActivity(
+const title: string = "teste 123 [1]";
+const description: string = "descrição";
+const organizationId: number = 111402;
+const folderId: number = 3764173;
+const categoryText: string = "asdasd";
+const accountId: number = 3757321;
+const creatorEmail: string = "nerdplis@gmail.com";
+const creatorPassword: string = "mobralzera";
+const estimatedEffort: number = 1;
+createActivity(
+  organizationId,
+  accountId,
+  folderId,
+  title,
+  description,
+  categoryText,
+  estimatedEffort,
+  creatorEmail,
+  creatorPassword
+);
+// module.exports =
+async function createActivity(
   organizationId: number,
   accountId: number,
   folderId: number,
@@ -44,11 +64,11 @@ module.exports = async function createActivity(
     },
     data: data,
   };
-  axios(JSON.stringify(config))
+  axios(config)
     .then(function (response: { data: any }) {
       console.log(JSON.stringify(response.data));
     })
     .catch(function (error: any) {
       console.log(error);
     });
-};
+}
