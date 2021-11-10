@@ -1,5 +1,5 @@
 const { error } = require("@actions/core");
-import axios from "axios";
+var axios = require("axios");
 
 module.exports = function getToken(
   creatorEmail: string,
@@ -10,25 +10,27 @@ module.exports = function getToken(
       query: `mutation{
       authenticationByEmail(email:"${creatorEmail}", password: "${creatorPassword}") {
       token
-}
+  }
 }`,
     });
 
     const config = {
       method: "POST",
-      url: "https://artia.app/graphl",
+      url: "https://app.artia.com/graphql",
       headers: {
         "Content-Type": "application/json",
       },
       data: data,
     };
 
-    axios(JSON.stringify(config)).then(function (response) {
-      const resObj = JSON.parse(JSON.stringify(response.data));
-      const token = resObj.data.authenticationByEmail.token;
-      return resolve(token);
-    });
-  }).catch(function (error) {
-    console.log(error);
+    axios(config)
+      .then(function (response: { data: any }) {
+        const resObj = JSON.parse(JSON.stringify(response.data));
+        const token = resObj.data.authenticationByEmail.token;
+        return resolve(token);
+      })
+      .catch(function (error: any) {
+        console.log(error);
+      });
   });
 };

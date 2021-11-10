@@ -1,5 +1,6 @@
 var asyncGetToken = require("../Authorization/getToken");
-import axios from "axios";
+var axios = require("axios");
+
 //Parametros la do core do action {organizationId, accountId}
 //Parametros informados no commit através de t:{activityId} | tudo que estiver dentro do comentário irá para tarefa.
 
@@ -35,7 +36,7 @@ module.exports = async function createActivity(
   });
   const config = {
     method: "POST",
-    url: "https://artia.app/graphl",
+    url: "https://app.artia.com/graphql'",
     headers: {
       OrganizationId: organizationId,
       "Content-Type": "application/json",
@@ -44,10 +45,10 @@ module.exports = async function createActivity(
     data: data,
   };
   axios(JSON.stringify(config))
-    .then(function (response) {
+    .then(function (response: { data: any }) {
       console.log(JSON.stringify(response.data));
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       console.log(error);
     });
 };

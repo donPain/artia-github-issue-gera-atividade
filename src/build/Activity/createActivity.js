@@ -1,10 +1,6 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 var asyncGetToken = require("../Authorization/getToken");
-const axios_1 = __importDefault(require("axios"));
+var axios = require("axios");
 //Parametros la do core do action {organizationId, accountId}
 //Parametros informados no commit através de t:{activityId} | tudo que estiver dentro do comentário irá para tarefa.
 module.exports = async function createActivity(organizationId, accountId, folderId, title, description, categoryText, estimatedEffort, creatorEmail, creatorPassword) {
@@ -29,7 +25,7 @@ module.exports = async function createActivity(organizationId, accountId, folder
     });
     const config = {
         method: "POST",
-        url: "https://artia.app/graphl",
+        url: "https://app.artia.com/graphql'",
         headers: {
             OrganizationId: organizationId,
             "Content-Type": "application/json",
@@ -37,7 +33,7 @@ module.exports = async function createActivity(organizationId, accountId, folder
         },
         data: data,
     };
-    (0, axios_1.default)(JSON.stringify(config))
+    axios(JSON.stringify(config))
         .then(function (response) {
         console.log(JSON.stringify(response.data));
     })
