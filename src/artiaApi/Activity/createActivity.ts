@@ -40,7 +40,7 @@ module.exports = async function createActivity(
     headers: {
       OrganizationId: organizationId,
       "Content-Type": "application/json",
-      Authorization: "Bearer" + newToken,
+      Authorization: "Bearer " + newToken,
     },
     data: data,
   };
