@@ -6,14 +6,17 @@ O GitHub Actions para o [Artia](https://github.com/donPain/artia-github-issue-ge
 - Declare o esofrço da tarefa quando ela for criada ao adicionar "[número de horas trabalhadas]" no fim do nome da tarefa
 
 ## Actions
+- OBS: Quando as outras partes da integração estiver prontas adicionar elas aqui e linkar elas apropriadamente.
 
-## - [`Login`](https://github.com/marketplace/actions/jira-login) - Log in to the Jira API
-## - [`CLI`](https://github.com/marketplace/actions/setup-jira) - Wrapped [go-jira](https://github.com/Netflix-Skunkworks/go-jira) CLI for common Jira actions
-## - [`Find issue key`](https://github.com/marketplace/actions/jira-find-issue-key) - Search for an issue key in commit message, branch name, etc. This issue key is then saved and used by the next actions in the same workflow
-## - [`Create`](https://github.com/marketplace/actions/jira-create-issue) - Create a new Jira issue
-## - [`Transition`](https://github.com/marketplace/actions/jira-issue-transition) - Transition a Jira issue
-## - [`Comment`](https://github.com/marketplace/actions/jira-add-comment) - Add a comment to a Jira issue
-## - [`TODO`](https://github.com/marketplace/actions/jira-issue-from-todo) - Create a Jira issue for each TODO comment in committed code
+<!-- 
+- [`Login`](https://github.com/marketplace/actions/jira-login) - Log in to the Jira API
+- [`CLI`](https://github.com/marketplace/actions/setup-jira) - Wrapped [go-jira](https://github.com/Netflix-Skunkworks/go-jira) CLI for common Jira actions
+- [`Find issue key`](https://github.com/marketplace/actions/jira-find-issue-key) - Search for an issue key in commit message, branch name, etc. This issue key is then saved and used by the next actions in the same workflow
+- [`Create`](https://github.com/marketplace/actions/jira-create-issue) - Create a new Jira issue
+- [`Transition`](https://github.com/marketplace/actions/jira-issue-transition) - Transition a Jira issue
+- [`Comment`](https://github.com/marketplace/actions/jira-add-comment) - Add a comment to a Jira issue
+- [`TODO`](https://github.com/marketplace/actions/jira-issue-from-todo) - Create a Jira issue for each TODO comment in committed code
+-->
 
 ## Como Usar
 Um exemplo de workflow aor criar uma `issue` no GitHub:
@@ -38,4 +41,3 @@ jobs:
           creatorEmail: 'test@solinftec.com'
           creatorPassword: ${{ secrets.ARTIA_PASSWORD }}
 ```
-
