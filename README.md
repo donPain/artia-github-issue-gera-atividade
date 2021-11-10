@@ -19,6 +19,11 @@ O GitHub Actions para o [Artia](https://github.com/donPain/artia-github-issue-ge
 -->
 
 ## Como Usar
+- Declarar versão e repositório da versão apropriada
+- Alterar "organizationId" para o ID da Organização correta.
+- Alterar "accountID" para o Grupo de Usuários correto.
+- Alterar "folderId" para a Pasta de Projetos correta.
+
 Um exemplo de workflow aor criar uma `issue` no GitHub:
 
 ```
@@ -33,7 +38,7 @@ jobs:
     steps:
       - name: Criando atividade
         id: Comment
-        uses: donPain/action_temp@vx.x
+        uses: donPain/artia-github-issue-gera-atividade@Vx.x
         with: 
           organizationId: 111401
           accountId: 3757280
